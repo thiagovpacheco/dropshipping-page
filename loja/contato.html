@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contato — LimpaBrasa</title>
+<meta name="description" content="Fale com a LimpaBrasa pelo WhatsApp, e-mail ou redes. Tire dúvidas sobre o produto, pedido ou entrega.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  .ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:36px;text-align:left}
+  .ct-cards{display:flex;flex-direction:column;gap:16px}
+  .ct-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--borda);border-radius:var(--radius);padding:20px;box-shadow:var(--sombra)}
+  .ct-card .ic{font-size:1.6rem;line-height:1}
+  .ct-card b{font-family:var(--fonte-titulo)}
+  .ct-card a{color:var(--brasa);font-weight:600}
+  .ct-card p{color:var(--texto-suave);font-size:.92rem;margin-top:2px}
+  form label{display:block;font-weight:600;font-size:.9rem;margin:14px 0 6px}
+  form input,form textarea{width:100%;padding:13px 14px;border:1px solid var(--borda);border-radius:10px;font-family:inherit;font-size:1rem;background:#fff}
+  form textarea{min-height:120px;resize:vertical}
+  .formbox{background:#fff;border:1px solid var(--borda);border-radius:var(--radius);padding:26px;box-shadow:var(--sombra)}
+  @media(max-width:760px){.ct-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">🔥 Atendimento rápido — chama no WhatsApp que a gente responde</div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html">Limpa<span>Brasa</span></a>
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <div class="header__right">
+      <button class="cart-btn" onclick="LBdrawer.open()" aria-label="Carrinho">🛒
+        <span class="count cart-count" style="display:none">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container center">
+    <span class="tagline">FALE COM A GENTE</span>
+    <h2 class="h2lead">Contato</h2>
+    <p class="muted">Dúvida sobre o produto, seu pedido ou a entrega? A gente responde rápido.</p>
+
+    <div class="ct-grid">
+      <div class="ct-cards">
+        <a class="ct-card" id="waCard" href="#" target="_blank">
+          <span class="ic">💬</span>
+          <span><b>WhatsApp</b><p>Resposta na hora, de segunda a sábado. <span style="color:var(--brasa)">Chamar agora →</span></p></span>
+        </a>
+        <div class="ct-card">
+          <span class="ic">✉️</span>
+          <span><b>E-mail</b><p><a id="mailLink" href="#">contato@limpabrasa.com.br</a></p></span>
+        </div>
+        <a class="ct-card" id="igCard" href="#" target="_blank">
+          <span class="ic">📸</span>
+          <span><b>Instagram</b><p>Bastidores, dicas de churrasco e novidades. <span style="color:var(--brasa)">Seguir →</span></p></span>
+        </a>
+        <a class="ct-card" id="ttCard" href="#" target="_blank">
+          <span class="ic">🎵</span>
+          <span><b>TikTok</b><p>Veja o LimpaBrasa em ação. <span style="color:var(--brasa)">Ver vídeos →</span></p></span>
+        </a>
+      </div>
+
+      <div class="formbox">
+        <h3 style="margin-bottom:4px">Manda sua mensagem</h3>
+        <p class="muted" style="font-size:.9rem">A gente retorna no e-mail ou WhatsApp informado.</p>
+        <form id="ctForm" onsubmit="return enviar(event)">
+          <label>Nome</label>
+          <input name="nome" required placeholder="Seu nome">
+          <label>WhatsApp ou e-mail</label>
+          <input name="contato" required placeholder="(00) 90000-0000">
+          <label>Mensagem</label>
+          <textarea name="msg" required placeholder="Como podemos ajudar?"></textarea>
+          <button class="btn btn--cta" style="margin-top:18px" type="submit">Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="logo" style="color:#fff">Limpa<span>Brasa</span></div>
+        <p style="margin-top:10px;max-width:340px">A escova elétrica que deixa a grelha nova de novo, sem esfregar.</p>
+        <div class="footer__pay"><span>Pix</span><span>Visa</span><span>Master</span><span>Elo</span><span>Boleto</span></div>
+      </div>
+      <div><h4>Loja</h4><a href="index.html">Início</a><a href="catalogo.html">Catálogo</a><a href="contato.html">Contato</a></div>
+      <div><h4>Fale com a gente</h4><a id="footWa" href="#" target="_blank">WhatsApp</a><a id="footIg" href="#" target="_blank">Instagram</a><a id="footTt" href="#" target="_blank">TikTok</a></div>
+    </div>
+    <div class="footer__bottom">© 2026 LimpaBrasa · Compra 100% segura</div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" onclick="LBdrawer.close()"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer__head"><h3>Seu carrinho</h3><button class="drawer__close" onclick="LBdrawer.close()">×</button></div>
+  <div class="drawer__body" id="cartBody"></div>
+  <div class="drawer__foot">
+    <div class="drawer__total"><span>Total</span><span id="cartTotal">R$ 0,00</span></div>
+    <p class="note">Frete grátis pro Brasil · Pix e cartão em até 12x</p>
+    <button class="btn btn--cta" id="checkoutBtn" onclick="LBcheckout()" disabled>Finalizar compra</button>
+  </div>
+</aside>
+
+<script src="js/config.js"></script>
+<script src="js/loja.js"></script>
+<script>
+  (function(){var c=LB.contato;
+    document.getElementById('waCard').href="https://wa.me/"+c.whatsapp;
+    document.getElementById('igCard').href="https://instagram.com/"+c.instagram;
+    document.getElementById('ttCard').href="https://tiktok.com/@"+c.tiktok;
+    document.getElementById('mailLink').href="mailto:"+c.email;
+    document.getElementById('mailLink').textContent=c.email;
+    document.getElementById('footWa').href="https://wa.me/"+c.whatsapp;
+    document.getElementById('footIg').href="https://instagram.com/"+c.instagram;
+    document.getElementById('footTt').href="https://tiktok.com/@"+c.tiktok;})();
+  function enviar(e){
+    e.preventDefault();
+    var f=e.target, txt="Olá! Sou "+f.nome.value+" ("+f.contato.value+").%0A"+encodeURIComponent(f.msg.value);
+    window.open("https://wa.me/"+LB.contato.whatsapp+"?text="+txt,"_blank");
+    return false;
+  }
+</script>
+</body>
+</html>

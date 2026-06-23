@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls Home)",
+      "Bash(ls \"Catálogo\" Catalogo)",
+      "Bash(ls Contato)",
+      "Bash(grep -aoiE \"content=\\\\\"[^\\\\\"]{3,80}\\\\\" property=\\\\\"og:title\\\\\"|property=\\\\\"og:title\\\\\" content=\\\\\"[^\\\\\"]{3,80}\\\\\"|property=\\\\\"og:site_name\\\\\" content=\\\\\"[^\\\\\"]{3,60}\\\\\"|<title>[^<]{3,90}</title>\" Home/index.html)",
+      "Bash(grep -aoiE \"<h1[^>]*>[^<]{3,90}</h1>\" Home/index.html)",
+      "Bash(node -e ' *)",
+      "Bash(ls templates/perfis)",
+      "Bash(ls templates *)",
+      "Bash(command -v magick convert ffmpeg cwebp)",
+      "Bash(node -e \"try{require.resolve\\('sharp'\\);console.log\\('sharp OK'\\)}catch\\(e\\){console.log\\('no sharp'\\)}\")",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_console_messages",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_click"
+    ]
+  }
+}

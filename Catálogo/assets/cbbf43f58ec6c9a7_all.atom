@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://irongrill.shop/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://irongrill.shop/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://irongrill.shop/collections/all.atom"/>
+  <title>IronGrill</title>
+  <updated>2026-05-16T00:53:56-05:00</updated>
+  <author>
+    <name>IronGrill</name>
+  </author>
+  <entry>
+    <id>https://irongrill.shop/products/7626037067879</id>
+    <published>2026-05-16T00:53:56-05:00</published>
+    <updated>2026-05-16T00:53:56-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://irongrill.shop/products/grill-brush-head"/>
+    <title>Grill Brush Head</title>
+    <s:type></s:type>
+    <s:vendor>IronGrill</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0667/8370/7239/files/Screenshot2026-05-16005236.png?v=1778910770"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>IronGrill<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            19.99
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://irongrill.shop/products/7626037067879</id>
+      <title>Default Title</title>
+      <s:price currency="USD">19.99</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://irongrill.shop/products/7626009378919</id>
+    <published>2026-05-15T23:49:20-05:00</published>
+    <updated>2026-05-15T23:49:20-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://irongrill.shop/products/irongrill"/>
+    <title>IronGrill Brush</title>
+    <s:type></s:type>
+    <s:vendor>IronGrill</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0667/8370/7239/files/hf_20260516_043232_fa14c090-3ebb-41ac-a766-eb08113e8465.png?v=1778906893"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>IronGrill<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            49.99
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>🔥 #1 Grill Cleaner<br>🧼 Fast &amp; Easy Cleaning<br>🚚 Free Shipping<br></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://irongrill.shop/products/7626009378919</id>
+      <title>Brown</title>
+      <s:price currency="USD">49.99</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://irongrill.shop/products/7626009378919</id>
+      <title>Black</title>
+      <s:price currency="USD">49.99</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+</feed>

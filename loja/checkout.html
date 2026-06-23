@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout — LimpaBrasa</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html">Limpa<span>Brasa</span></a>
+    <a class="co__back" href="index.html">← Voltar à loja</a>
+  </div>
+</header>
+
+<main class="co">
+  <div class="container co__grid">
+
+    <!-- ESQUERDA: pagamento -->
+    <section class="co__pay">
+      <h1 class="co__title">Finalizar pagamento</h1>
+      <p class="co__sub">Pix com aprovação na hora ou cartão em até 12x. Pagamento processado pelo Mercado Pago. 🔒</p>
+
+      <div id="paymentBrick_container"></div>
+
+      <div id="coLoading" class="co__loading">Carregando formas de pagamento…</div>
+      <div id="coConfig" class="co__alert" style="display:none">
+        ⚠️ Pagamento online ainda não configurado.<br>
+        Fale com a gente no WhatsApp pra fechar o pedido:
+        <a id="coWa" href="#" target="_blank">abrir WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- DIREITA: resumo -->
+    <aside class="co__summary">
+      <h2 class="co__sumtitle">Seu pedido</h2>
+      <div id="coItems"></div>
+      <div class="co__line"><span>Subtotal</span><span id="coSubtotal">R$ 0,00</span></div>
+      <div class="co__line"><span>Frete</span><span class="co__free">Grátis</span></div>
+      <div class="co__total"><span>Total</span><span id="coTotal">R$ 0,00</span></div>
+      <div class="co__trust">
+        <div>🔒 Pagamento seguro Mercado Pago</div>
+        <div>🚚 Frete grátis pro Brasil</div>
+        <div>🔁 7 dias pra trocar</div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- RESULTADO (sucesso / pix / erro) -->
+  <div id="coResult" class="co__result" style="display:none">
+    <div class="co__card" id="coResultCard"></div>
+  </div>
+</main>
+
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+<script src="js/config.js"></script>
+<script src="js/checkout-page.js"></script>
+</body>
+</html>

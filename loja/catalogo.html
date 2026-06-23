@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo — LimpaBrasa</title>
+<meta name="description" content="Conheça a linha LimpaBrasa: a escova elétrica de churrasqueira e a cabeça de cerdas extra.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  .cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:36px}
+  .pcard{background:#fff;border:1px solid var(--borda);border-radius:var(--radius);overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column}
+  .pcard__img{aspect-ratio:1/1;background:#fff;overflow:hidden}
+  .pcard__img img{width:100%;height:100%;object-fit:cover}
+  .pcard__body{padding:22px;display:flex;flex-direction:column;flex:1}
+  .pcard h3{font-size:1.25rem;margin-bottom:6px}
+  .pcard p{color:var(--texto-suave);font-size:.95rem;margin-bottom:14px;flex:1}
+  .pcard .price{margin-bottom:4px}
+  .pcard .price__now{font-size:1.6rem}
+  .pcard__terms{color:var(--texto-suave);font-size:.85rem;margin-bottom:16px}
+  @media(max-width:720px){.cat-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">🔥 <strong>QUEIMA DE ESTOQUE</strong> — Frete GRÁTIS pra todo o Brasil + 40% OFF</div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html">Limpa<span>Brasa</span></a>
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <div class="header__right">
+      <button class="cart-btn" onclick="LBdrawer.open()" aria-label="Carrinho">🛒
+        <span class="count cart-count" style="display:none">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container center">
+    <span class="tagline">NOSSA LINHA</span>
+    <h2 class="h2lead">Catálogo LimpaBrasa</h2>
+    <p class="muted">Tudo que você precisa pra manter a grelha nova.</p>
+
+    <div class="cat-grid" style="text-align:left">
+      <!-- produto principal -->
+      <article class="pcard">
+        <a class="pcard__img" href="index.html"><img src="assets/produto-marrom.webp" alt="Escova elétrica de churrasqueira LimpaBrasa"></a>
+        <div class="pcard__body">
+          <h3>Escova Elétrica de Churrasqueira</h3>
+          <p>O carro-chefe. Motor gira as cerdas e arranca gordura, carbono e crosta queimada sem você esfregar. Recarregável USB. Cores marrom e preto.</p>
+          <div class="price">
+            <span class="price__now">R$ 299</span>
+            <span class="price__old">R$ 499</span>
+            <span class="price__off">-40%</span>
+          </div>
+          <p class="pcard__terms">12x de R$ 24,92 · Pix à vista</p>
+          <a href="index.html" class="btn btn--cta">Ver produto</a>
+        </div>
+      </article>
+
+      <!-- bundle / cabeça extra -->
+      <article class="pcard">
+        <div class="pcard__img"><img src="assets/cabeca-extra.webp" alt="Cabeça de cerdas extra LimpaBrasa"></div>
+        <div class="pcard__body">
+          <h3>Cabeça de Cerdas Extra</h3>
+          <p>Reserva de reposição pra quando a primeira gastar. Dobra a vida útil da sua escova. Encaixe rápido.</p>
+          <div class="price">
+            <span class="price__now">R$ 49</span>
+          </div>
+          <p class="pcard__terms">Adicione junto com a escova e economize frete</p>
+          <button class="btn btn--dark" onclick="addExtra()">Adicionar ao carrinho</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="logo" style="color:#fff">Limpa<span>Brasa</span></div>
+        <p style="margin-top:10px;max-width:340px">A escova elétrica que deixa a grelha nova de novo, sem esfregar.</p>
+        <div class="footer__pay"><span>Pix</span><span>Visa</span><span>Master</span><span>Elo</span><span>Boleto</span></div>
+      </div>
+      <div><h4>Loja</h4><a href="index.html">Início</a><a href="catalogo.html">Catálogo</a><a href="contato.html">Contato</a></div>
+      <div><h4>Fale com a gente</h4><a id="footWa" href="#" target="_blank">WhatsApp</a><a id="footIg" href="#" target="_blank">Instagram</a><a id="footTt" href="#" target="_blank">TikTok</a></div>
+    </div>
+    <div class="footer__bottom">© 2026 LimpaBrasa · Compra 100% segura</div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" onclick="LBdrawer.close()"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer__head"><h3>Seu carrinho</h3><button class="drawer__close" onclick="LBdrawer.close()">×</button></div>
+  <div class="drawer__body" id="cartBody"></div>
+  <div class="drawer__foot">
+    <div class="drawer__total"><span>Total</span><span id="cartTotal">R$ 0,00</span></div>
+    <p class="note">Frete grátis pro Brasil · Pix e cartão em até 12x</p>
+    <button class="btn btn--cta" id="checkoutBtn" onclick="LBcheckout()" disabled>Finalizar compra</button>
+  </div>
+</aside>
+
+<script src="js/config.js"></script>
+<script src="js/loja.js"></script>
+<script>
+  function addExtra(){ var b=LB.produto.bundle; LBcart.add({tipo:"bundle",nome:b.nome,img:"assets/cabeca-extra.webp",preco:b.precoCentavos,bundle:false}); }
+  (function(){var c=LB.contato;
+    document.getElementById('footWa').href="https://wa.me/"+c.whatsapp;
+    document.getElementById('footIg').href="https://instagram.com/"+c.instagram;
+    document.getElementById('footTt').href="https://tiktok.com/@"+c.tiktok;})();
+</script>
+</body>
+</html>

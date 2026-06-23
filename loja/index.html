@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LimpaBrasa — Escova Elétrica de Churrasqueira | Grelha nova em 1 minuto</title>
+<meta name="description" content="Escova elétrica recarregável que tira gordura, carbono e crosta queimada da grelha sem esfregar. Motor faz o trabalho. Frete grátis pro Brasil.">
+<meta property="og:title" content="LimpaBrasa — sua grelha nova de novo, sem esfregar">
+<meta property="og:description" content="Escova elétrica recarregável que limpa a churrasqueira em segundos. Motor gira as cerdas, você só passa.">
+<meta property="og:image" content="assets/produto-marrom.webp">
+<meta property="og:type" content="product">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="topbar">🔥 <strong>QUEIMA DE ESTOQUE</strong> — Frete GRÁTIS pra todo o Brasil + 40% OFF por tempo limitado</div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html">Limpa<span>Brasa</span></a>
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <div class="header__right">
+      <button class="cart-btn" onclick="LBdrawer.open()" aria-label="Carrinho">🛒
+        <span class="count cart-count" style="display:none">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO / PRODUTO ===== -->
+<section class="hero">
+  <div class="container hero__grid">
+    <div>
+      <div class="gallery__main">
+        <img id="mainImg" src="assets/produto-marrom.webp" alt="Escova elétrica de churrasqueira LimpaBrasa">
+      </div>
+      <div class="gallery__thumbs">
+        <button class="thumb active" onclick="setImg(this,'assets/produto-marrom.webp')"><img src="assets/produto-marrom.webp" alt="marrom"></button>
+        <button class="thumb" onclick="setImg(this,'assets/produto-preto.webp')"><img src="assets/produto-preto.webp" alt="preto"></button>
+        <button class="thumb" onclick="setImg(this,'assets/acao-1.webp')"><img src="assets/acao-1.webp" alt="em uso"></button>
+        <button class="thumb" onclick="setImg(this,'assets/grelha-limpa.webp')"><img src="assets/grelha-limpa.webp" alt="resultado"></button>
+      </div>
+    </div>
+
+    <div>
+      <div class="rating">
+        <span class="stars">★★★★★</span>
+        <span class="count">4,9 · +1.200 churrasqueiros satisfeitos</span>
+      </div>
+      <h1>A grelha nova de novo — <span style="color:var(--brasa)">sem esfregar</span></h1>
+      <p class="subhead">A escova elétrica que faz o trabalho pesado por você. O motor gira as cerdas em alta rotação e arranca gordura, carbono e crosta queimada em segundos. Você só passa.</p>
+
+      <div class="price">
+        <span class="price__now">R$ 299</span>
+        <span class="price__old">R$ 499</span>
+        <span class="price__off">-40%</span>
+      </div>
+      <p class="price__terms">ou <b>12x de R$ 24,92</b> sem juros · <b>Pix à vista</b> com aprovação na hora</p>
+
+      <div class="opt">
+        <label class="opt__label">Cor: <span id="corSel">Marrom</span></label>
+        <div class="swatches">
+          <button class="swatch active" data-cor="Marrom" data-img="assets/produto-marrom.webp" onclick="setCor(this)"><span class="dot dot--marrom"></span>Marrom</button>
+          <button class="swatch" data-cor="Preto" data-img="assets/produto-preto.webp" onclick="setCor(this)"><span class="dot dot--preto"></span>Preto</button>
+        </div>
+      </div>
+
+      <label class="bundle" id="bundleBox" onclick="toggleBundle(event)">
+        <input type="checkbox" id="bundleChk">
+        <span class="bundle__txt">
+          <b>+ Cabeça de cerdas extra <span class="bundle__tag">MAIS VENDIDO</span></b>
+          Dobre a vida útil — uma reserva pra quando a primeira gastar. <b>+R$ 49</b>
+        </span>
+      </label>
+
+      <button class="btn btn--cta btn--lg pulse" onclick="addToCart()">🔥 Comprar agora</button>
+
+      <div class="trust">
+        <div>✅ Frete grátis Brasil</div>
+        <div>🔁 7 dias pra trocar</div>
+        <div>🔒 Pagamento seguro</div>
+        <div>⚡ Recarregável USB</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SELOS ===== -->
+<section class="badges">
+  <div class="container">
+    <div class="badge"><span class="ic">⚡</span> Motor elétrico potente</div>
+    <div class="badge"><span class="ic">🔋</span> Recarregável sem fio</div>
+    <div class="badge"><span class="ic">🧽</span> Cerdas de aço resistentes</div>
+    <div class="badge"><span class="ic">🚚</span> Frete grátis pro Brasil</div>
+  </div>
+</section>
+
+<!-- ===== BENEFÍCIOS ===== -->
+<section class="section">
+  <div class="container center">
+    <span class="tagline">POR QUE TODO MUNDO TÁ COMPRANDO</span>
+    <h2 class="h2lead">Limpar a churrasqueira parou de ser sofrimento</h2>
+    <p class="muted">Esquece a escovinha velha que não tira nada e ainda solta cerda. O motor faz a força.</p>
+    <div class="benefits__grid">
+      <div class="bcard">
+        <img src="assets/acao-1.webp" alt="Removendo gordura rápido">
+        <div class="bcard__body">
+          <h3>Tira gordura na hora</h3>
+          <p>Cerdas giratórias em alta rotação quebram a gordura e o carbono no contato. Sem esforço, sem ficar minutos esfregando.</p>
+        </div>
+      </div>
+      <div class="bcard">
+        <img src="assets/uso-mao.webp" alt="Ação de limpeza motorizada">
+        <div class="bcard__body">
+          <h3>O motor faz por você</h3>
+          <p>O giro constante faz a raspagem sozinho. Você só guia a escova sobre a grelha — o braço agradece.</p>
+        </div>
+      </div>
+      <div class="bcard">
+        <img src="assets/acao-3.webp" alt="Limpeza rápida pós churrasco">
+        <div class="bcard__body">
+          <h3>Pronto em 1 minuto</h3>
+          <p>A limpeza pós-churrasco vira uma passada rápida. Mais tempo curtindo, menos tempo limpando.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ANTES / DEPOIS ===== -->
+<section class="section section--dark">
+  <div class="container center">
+    <span class="tagline">RESULTADO REAL</span>
+    <h2 class="h2lead">Da crosta queimada à grelha brilhando</h2>
+    <p class="muted" style="color:#cfc7bd">Uma passada. É isso.</p>
+    <div class="ba">
+      <figure>
+        <figcaption>ANTES</figcaption>
+        <img src="assets/grelha-suja.webp" alt="Grelha suja antes">
+      </figure>
+      <figure>
+        <figcaption class="ok">DEPOIS</figcaption>
+        <img src="assets/grelha-limpa.webp" alt="Grelha limpa depois">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMO FUNCIONA ===== -->
+<section class="section" id="como-funciona">
+  <div class="container center">
+    <span class="tagline">SIMPLES ASSIM</span>
+    <h2 class="h2lead">Como funciona</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step__n">1</div>
+        <h3>Liga o motor</h3>
+        <p>Recarregável por USB. Carrega uma vez e usa por vários churrascos sem fio.</p>
+      </div>
+      <div class="step">
+        <div class="step__n">2</div>
+        <h3>Passa na grelha</h3>
+        <p>As cerdas de aço giram sozinhas e arrancam gordura, carbono e crosta queimada.</p>
+      </div>
+      <div class="step">
+        <div class="step__n">3</div>
+        <h3>Grelha nova</h3>
+        <p>Em segundos a grelha tá limpa e pronta. Enxágua a cabeça e guarda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DEPOIMENTOS ===== -->
+<section class="section section--dark">
+  <div class="container center">
+    <span class="tagline">QUEM JÁ USA</span>
+    <h2 class="h2lead">Aprovado por quem leva churrasco a sério</h2>
+    <div class="reviews">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>"Comprei desconfiado e me surpreendi. A grelha tava um horror, virou nova. Não esfrego mais nada."</p>
+        <div class="review__by"><img src="assets/avatar.webp" alt=""><div>Rodrigo M.<br><span class="verif">✔ Compra verificada</span></div></div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>"Melhor presente que dei pro meu pai. Ele faz churrasco todo fim de semana e agora a limpeza é rapidinha."</p>
+        <div class="review__by"><img src="assets/avatar.webp" alt=""><div>Carla S.<br><span class="verif">✔ Compra verificada</span></div></div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>"Mudou a forma como limpo depois do bbq. O motor faz tudo, é só passar. Recomendo demais."</p>
+        <div class="review__by"><img src="assets/avatar.webp" alt=""><div>Júnior F.<br><span class="verif">✔ Compra verificada</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section">
+  <div class="container">
+    <h2 class="h2lead center">Perguntas frequentes</h2>
+    <div class="faq">
+      <details><summary>Como a escova elétrica funciona?</summary><p>Ela tem uma cabeça giratória motorizada que gira as cerdas em alta rotação pra quebrar gordura, comida queimada e carbono com o mínimo de esforço.</p></details>
+      <details><summary>Serve em qualquer churrasqueira?</summary><p>Sim. Funciona na maioria das grelhas, incluindo aço inox e ferro fundido. Evite usar em revestimentos antiaderentes delicados.</p></details>
+      <details><summary>Preciso fazer força?</summary><p>Não. O motor faz o trabalho pesado. Você só guia a escova sobre a grelha enquanto ela limpa.</p></details>
+      <details><summary>É recarregável ou usa pilha?</summary><p>Recarregável por USB, sem fio. Carrega uma vez e usa em vários churrascos com total liberdade.</p></details>
+      <details><summary>Como limpo a própria escova?</summary><p>Depois de usar, enxágue ou passe um pano na cabeça pra tirar os resíduos e deixe secar antes de guardar.</p></details>
+      <details><summary>Quanto tempo leva a entrega?</summary><p>Pedidos são processados em até 2 dias úteis e chegam pela transportadora/Correios. O prazo aparece no checkout conforme seu CEP. Frete grátis pro Brasil.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+<section class="section section--dark finalcta">
+  <div class="container">
+    <h2>Pronto pra nunca mais sofrer pra limpar a grelha?</h2>
+    <p class="muted" style="color:#cfc7bd">Estoque limitado nessa condição. Frete grátis pro Brasil inteiro.</p>
+    <div class="price">
+      <span class="price__now" style="color:#fff">R$ 299</span>
+      <span class="price__old">R$ 499</span>
+      <span class="price__off">-40%</span>
+    </div>
+    <p class="price__terms" style="color:#cfc7bd">12x de R$ 24,92 sem juros · Pix com desconto</p>
+    <button class="btn btn--cta btn--lg pulse" onclick="addToCart()">🔥 Quero o meu LimpaBrasa</button>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="logo" style="color:#fff">Limpa<span>Brasa</span></div>
+        <p style="margin-top:10px;max-width:340px">A escova elétrica que deixa a grelha nova de novo, sem esfregar. Frete grátis pro Brasil.</p>
+        <div class="footer__pay">
+          <span>Pix</span><span>Visa</span><span>Master</span><span>Elo</span><span>Boleto</span>
+        </div>
+      </div>
+      <div>
+        <h4>Loja</h4>
+        <a href="index.html">Início</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <div>
+        <h4>Fale com a gente</h4>
+        <a id="footWa" href="#" target="_blank">WhatsApp</a>
+        <a id="footIg" href="#" target="_blank">Instagram</a>
+        <a id="footTt" href="#" target="_blank">TikTok</a>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2026 LimpaBrasa · Todos os direitos reservados · Compra 100% segura</div>
+  </div>
+</footer>
+
+<!-- ===== CART DRAWER ===== -->
+<div class="overlay" id="overlay" onclick="LBdrawer.close()"></div>
+<aside class="drawer" id="drawer" aria-label="Carrinho">
+  <div class="drawer__head">
+    <h3>Seu carrinho</h3>
+    <button class="drawer__close" onclick="LBdrawer.close()">×</button>
+  </div>
+  <div class="drawer__body" id="cartBody"></div>
+  <div class="drawer__foot">
+    <div class="drawer__total"><span>Total</span><span id="cartTotal">R$ 0,00</span></div>
+    <p class="note">Frete grátis pro Brasil · Pix e cartão em até 12x</p>
+    <button class="btn btn--cta" id="checkoutBtn" onclick="LBcheckout()" disabled>Finalizar compra</button>
+  </div>
+</aside>
+
+<script src="js/config.js"></script>
+<script src="js/loja.js"></script>
+<script>
+  // galeria
+  function setImg(btn, src){ document.getElementById('mainImg').src = src;
+    document.querySelectorAll('.thumb').forEach(function(t){t.classList.remove('active')}); btn.classList.add('active'); }
+  // cor
+  var cor = "Marrom";
+  function setCor(btn){ cor = btn.dataset.cor; document.getElementById('corSel').textContent = cor;
+    document.getElementById('mainImg').src = btn.dataset.img;
+    document.querySelectorAll('.swatch').forEach(function(s){s.classList.remove('active')}); btn.classList.add('active');
+    document.querySelectorAll('.thumb').forEach(function(t){t.classList.remove('active')}); }
+  // bundle
+  function toggleBundle(e){ var box=document.getElementById('bundleBox'); var chk=document.getElementById('bundleChk');
+    if(e.target.tagName!=='INPUT'){ chk.checked=!chk.checked; } box.classList.toggle('active', chk.checked); }
+  // add to cart
+  function addToCart(){
+    var P = LB.produto;
+    LBcart.add({ tipo:"principal", nome:P.nome, variante:cor,
+      img: cor==="Preto"? "assets/produto-preto.webp":"assets/produto-marrom.webp",
+      preco:P.precoCentavos, bundle:false });
+    if(document.getElementById('bundleChk').checked){
+      LBcart.add({ tipo:"bundle", nome:P.bundle.nome, img:"assets/cabeca-extra.webp", preco:P.bundle.precoCentavos, bundle:false });
+    }
+  }
+  // links de contato no footer
+  (function(){var c=LB.contato;
+    document.getElementById('footWa').href="https://wa.me/"+c.whatsapp;
+    document.getElementById('footIg').href="https://instagram.com/"+c.instagram;
+    document.getElementById('footTt').href="https://tiktok.com/@"+c.tiktok;
+  })();
+</script>
+</body>
+</html>
