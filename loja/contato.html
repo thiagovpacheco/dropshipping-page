@@ -7,8 +7,9 @@
 <meta name="description" content="Fale com a LimpaBrasa pelo WhatsApp, e-mail ou redes. Tire dúvidas sobre o produto, pedido ou entrega.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E">
 <style>
   .ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:36px;text-align:left}
   .ct-cards{display:flex;flex-direction:column;gap:16px}
@@ -34,9 +35,11 @@
     <nav class="nav">
       <a href="index.html">Início</a>
       <a href="catalogo.html">Catálogo</a>
+      <a href="index.html#como-funciona">Como funciona</a>
       <a href="contato.html">Contato</a>
     </nav>
     <div class="header__right">
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" onclick="LBnav(this)">☰</button>
       <button class="cart-btn" onclick="LBdrawer.open()" aria-label="Carrinho">🛒
         <span class="count cart-count" style="display:none">0</span>
       </button>
@@ -48,7 +51,7 @@
   <div class="container center">
     <span class="tagline">FALE COM A GENTE</span>
     <h2 class="h2lead">Contato</h2>
-    <p class="muted">Dúvida sobre o produto, seu pedido ou a entrega? A gente responde rápido.</p>
+    <p class="muted">Dúvida sobre o produto, seu pedido ou a entrega? Chama que a gente responde rápido — gente de verdade, não robô.</p>
 
     <div class="ct-grid">
       <div class="ct-cards">

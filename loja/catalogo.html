@@ -7,8 +7,9 @@
 <meta name="description" content="Conheça a linha LimpaBrasa: a escova elétrica de churrasqueira e a cabeça de cerdas extra.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E">
 <style>
   .cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:36px}
   .pcard{background:#fff;border:1px solid var(--borda);border-radius:var(--radius);overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column}
@@ -33,9 +34,11 @@
     <nav class="nav">
       <a href="index.html">Início</a>
       <a href="catalogo.html">Catálogo</a>
+      <a href="index.html#como-funciona">Como funciona</a>
       <a href="contato.html">Contato</a>
     </nav>
     <div class="header__right">
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" onclick="LBnav(this)">☰</button>
       <button class="cart-btn" onclick="LBdrawer.open()" aria-label="Carrinho">🛒
         <span class="count cart-count" style="display:none">0</span>
       </button>
@@ -47,7 +50,7 @@
   <div class="container center">
     <span class="tagline">NOSSA LINHA</span>
     <h2 class="h2lead">Catálogo LimpaBrasa</h2>
-    <p class="muted">Tudo que você precisa pra manter a grelha nova.</p>
+    <p class="muted">Tudo que você precisa pra nunca mais brigar com a grelha.</p>
 
     <div class="cat-grid" style="text-align:left">
       <!-- produto principal -->
@@ -55,7 +58,7 @@
         <a class="pcard__img" href="index.html"><img src="assets/produto-marrom.webp" alt="Escova elétrica de churrasqueira LimpaBrasa"></a>
         <div class="pcard__body">
           <h3>Escova Elétrica de Churrasqueira</h3>
-          <p>O carro-chefe. Motor gira as cerdas e arranca gordura, carbono e crosta queimada sem você esfregar. Recarregável USB. Cores marrom e preto.</p>
+          <p>O carro-chefe. O motor gira as cerdas e descola gordura, carbono e crosta queimada que a escovinha comum não tira. Recarregável USB. Marrom ou preto.</p>
           <div class="price">
             <span class="price__now">R$ 299</span>
             <span class="price__old">R$ 499</span>
@@ -71,7 +74,7 @@
         <div class="pcard__img"><img src="assets/cabeca-extra.webp" alt="Cabeça de cerdas extra LimpaBrasa"></div>
         <div class="pcard__body">
           <h3>Cabeça de Cerdas Extra</h3>
-          <p>Reserva de reposição pra quando a primeira gastar. Dobra a vida útil da sua escova. Encaixe rápido.</p>
+          <p>A reserva pra nunca ficar na mão no dia do churrasco. Dobra a vida útil da sua escova e troca em segundos no encaixe rápido.</p>
           <div class="price">
             <span class="price__now">R$ 49</span>
           </div>

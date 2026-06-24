@@ -76,6 +76,15 @@
   function close() { var o = document.getElementById("overlay"), d = document.getElementById("drawer"); if (o) o.classList.remove("open"); if (d) d.classList.remove("open"); }
   window.LBdrawer = { open: open, close: close };
 
+  // ---------- menu mobile ----------
+  window.LBnav = function (btn) {
+    var nav = document.querySelector(".nav");
+    if (!nav) return;
+    var aberto = nav.classList.toggle("open");
+    btn.setAttribute("aria-expanded", aberto ? "true" : "false");
+    btn.textContent = aberto ? "✕" : "☰";
+  };
+
   // ---------- checkout ----------
   // Vai pra página de checkout transparente (Pix + cartão no próprio site).
   // Se houver link de pagamento configurado, redireciona direto pra ele.
@@ -86,5 +95,26 @@
     window.location.href = CFG.checkout.pagina || "checkout.html";
   };
 
-  document.addEventListener("DOMContentLoaded", render);
+  // ---------- before/after slider ----------
+  function initBA() {
+    var s = document.getElementById("baSlider");
+    if (!s) return;
+    var dragging = false;
+    function setP(clientX) {
+      var r = s.getBoundingClientRect();
+      var p = ((clientX - r.left) / r.width) * 100;
+      p = Math.max(0, Math.min(100, p));
+      s.style.setProperty("--p", p + "%");
+    }
+    s.addEventListener("pointerdown", function (e) {
+      dragging = true;
+      try { s.setPointerCapture(e.pointerId); } catch (err) {}
+      setP(e.clientX);
+    });
+    s.addEventListener("pointermove", function (e) { if (dragging) setP(e.clientX); });
+    s.addEventListener("pointerup", function () { dragging = false; });
+    s.addEventListener("pointercancel", function () { dragging = false; });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () { render(); initBA(); });
 })();

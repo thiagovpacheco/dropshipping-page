@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LimpaBrasa — Escova Elétrica de Churrasqueira | Grelha nova em 1 minuto</title>
-<meta name="description" content="Escova elétrica recarregável que tira gordura, carbono e crosta queimada da grelha sem esfregar. Motor faz o trabalho. Frete grátis pro Brasil.">
-<meta property="og:title" content="LimpaBrasa — sua grelha nova de novo, sem esfregar">
-<meta property="og:description" content="Escova elétrica recarregável que limpa a churrasqueira em segundos. Motor gira as cerdas, você só passa.">
+<title>LimpaBrasa — Escova Elétrica de Churrasqueira | Largue a escovinha de arame</title>
+<meta name="description" content="Limpar grelha encardida na mão é quase impossível — a crosta queimada não sai. A escova elétrica LimpaBrasa descola gordura, carbono e crosta que a escovinha comum não tira. O motor gira, você só encosta. Frete grátis pro Brasil.">
+<meta property="og:title" content="LimpaBrasa — sua grelha limpa de verdade, não só por cima">
+<meta property="og:description" content="O motor gira as cerdas e arranca a crosta queimada que a escovinha de arame não tira. Você só encosta. Frete grátis.">
 <meta property="og:image" content="assets/produto-marrom.webp">
 <meta property="og:type" content="product">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 
-<div class="topbar">🔥 <strong>QUEIMA DE ESTOQUE</strong> — Frete GRÁTIS pra todo o Brasil + 40% OFF por tempo limitado</div>
+<div class="topbar">🔥 <strong>QUEIMA DE ESTOQUE</strong> — Frete GRÁTIS + 40% OFF · acaba quando o estoque zerar</div>
 
 <header class="header">
   <div class="container header__inner">
@@ -28,6 +29,7 @@
       <a href="contato.html">Contato</a>
     </nav>
     <div class="header__right">
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" onclick="LBnav(this)">☰</button>
       <button class="cart-btn" onclick="LBdrawer.open()" aria-label="Carrinho">🛒
         <span class="count cart-count" style="display:none">0</span>
       </button>
@@ -55,8 +57,8 @@
         <span class="stars">★★★★★</span>
         <span class="count">4,9 · +1.200 churrasqueiros satisfeitos</span>
       </div>
-      <h1>A grelha nova de novo — <span style="color:var(--brasa)">sem esfregar</span></h1>
-      <p class="subhead">A escova elétrica que faz o trabalho pesado por você. O motor gira as cerdas em alta rotação e arranca gordura, carbono e crosta queimada em segundos. Você só passa.</p>
+      <h1>A grelha nova de novo — <span style="color:var(--brasa)">limpa de verdade</span></h1>
+      <p class="subhead">Você já sabe: limpar grelha encardida na mão é quase impossível. Você esfrega, esfrega, gasta meia hora — e a crosta preta continua lá, grudada. A escovinha comum só empurra a sujeira de um lado pro outro. O LimpaBrasa é diferente: o motor gira as cerdas em alta rotação e descola gordura, carbono e crosta queimada que não saíam de jeito nenhum. Você só encosta.</p>
 
       <div class="price">
         <span class="price__now">R$ 299</span>
@@ -77,11 +79,11 @@
         <input type="checkbox" id="bundleChk">
         <span class="bundle__txt">
           <b>+ Cabeça de cerdas extra <span class="bundle__tag">MAIS VENDIDO</span></b>
-          Dobre a vida útil — uma reserva pra quando a primeira gastar. <b>+R$ 49</b>
+          Garante uma reserva e nunca fica na mão. Dobra a vida útil da sua escova. <b>+R$ 49</b>
         </span>
       </label>
 
-      <button class="btn btn--cta btn--lg pulse" onclick="addToCart()">🔥 Comprar agora</button>
+      <button class="btn btn--cta btn--lg pulse" onclick="addToCart()">🔥 Quero a minha grelha nova</button>
 
       <div class="trust">
         <div>✅ Frete grátis Brasil</div>
@@ -106,50 +108,89 @@
 <!-- ===== BENEFÍCIOS ===== -->
 <section class="section">
   <div class="container center">
-    <span class="tagline">POR QUE TODO MUNDO TÁ COMPRANDO</span>
-    <h2 class="h2lead">Limpar a churrasqueira parou de ser sofrimento</h2>
-    <p class="muted">Esquece a escovinha velha que não tira nada e ainda solta cerda. O motor faz a força.</p>
+    <span class="tagline">POR QUE A ESCOVINHA NUNCA RESOLVEU</span>
+    <h2 class="h2lead">A crosta queimada que não saía, agora sai</h2>
+    <p class="muted">Aquela escovinha de arame que vive na sua churrasqueira passa por cima, finge que limpou e a sujeira continua lá. O LimpaBrasa entra fundo e descola o que parecia impossível tirar.</p>
     <div class="benefits__grid">
       <div class="bcard">
-        <img src="assets/acao-1.webp" alt="Removendo gordura rápido">
+        <img src="assets/acao-1.webp" alt="Removendo gordura grudada">
         <div class="bcard__body">
-          <h3>Tira gordura na hora</h3>
-          <p>Cerdas giratórias em alta rotação quebram a gordura e o carbono no contato. Sem esforço, sem ficar minutos esfregando.</p>
+          <h3>Tira a crosta que não saía</h3>
+          <p>Gordura empedrada, carbono preto, comida queimada de meses grudada na grelha. As cerdas giram em alta rotação e descolam tudo — aquilo que a escovinha comum nunca encostou.</p>
         </div>
       </div>
       <div class="bcard">
-        <img src="assets/uso-mao.webp" alt="Ação de limpeza motorizada">
+        <img src="assets/uso-mao.webp" alt="Limpeza profunda entre as barras">
         <div class="bcard__body">
-          <h3>O motor faz por você</h3>
-          <p>O giro constante faz a raspagem sozinho. Você só guia a escova sobre a grelha — o braço agradece.</p>
+          <h3>Limpa de verdade, não só por cima</h3>
+          <p>A escova de arame passa por cima e finge que limpou. O motor entra entre as barras da grelha e raspa fundo, deixando o ferro de cara nova.</p>
         </div>
       </div>
       <div class="bcard">
         <img src="assets/acao-3.webp" alt="Limpeza rápida pós churrasco">
         <div class="bcard__body">
-          <h3>Pronto em 1 minuto</h3>
-          <p>A limpeza pós-churrasco vira uma passada rápida. Mais tempo curtindo, menos tempo limpando.</p>
+          <h3>Resolve em 1 minuto</h3>
+          <p>O que você levava meia hora esfregando (e nem ficava bom) agora é uma passada rápida. Grelha pronta, churrasco salvo.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ===== VÍDEOS EM AÇÃO ===== -->
+<section class="section" id="videos">
+  <div class="container center">
+    <span class="tagline">VÍDEOS REAIS</span>
+    <h2 class="h2lead">Veja o LimpaBrasa em ação</h2>
+    <p class="muted">Sem corte, sem truque, sem photoshop. Repara a grelha mudando de cor na hora.</p>
+  </div>
+  <div class="container vfeatures">
+    <div class="vfeature">
+      <div class="vfeature__video">
+        <div class="vidcard"><video src="assets/demo-1.mp4" poster="assets/demo-1.webp" autoplay muted loop playsinline preload="none"></video></div>
+      </div>
+      <div class="vfeature__txt">
+        <span class="vfeature__step">01</span>
+        <h3>Tira a gordura mais grudada num instante</h3>
+        <p>O motor elétrico gira as cerdas em alta rotação e quebra a gordura no contato — aquela camada empedrada que a escovinha comum nem encosta.</p>
+      </div>
+    </div>
+    <div class="vfeature vfeature--rev">
+      <div class="vfeature__video">
+        <div class="vidcard"><video src="assets/demo-2.mp4" poster="assets/demo-2.webp" autoplay muted loop playsinline preload="none"></video></div>
+      </div>
+      <div class="vfeature__txt">
+        <span class="vfeature__step">02</span>
+        <h3>Força elétrica de raspagem de verdade</h3>
+        <p>O giro constante faz toda a raspagem por você, entrando fundo entre as barras da grelha — onde a mão não alcança e a escova de arame não chega.</p>
+      </div>
+    </div>
+    <div class="vfeature">
+      <div class="vfeature__video">
+        <div class="vidcard"><video src="assets/demo-3.mp4" poster="assets/demo-3.webp" autoplay muted loop playsinline preload="none"></video></div>
+      </div>
+      <div class="vfeature__txt">
+        <span class="vfeature__step">03</span>
+        <h3>Economiza tempo depois de cada churrasco</h3>
+        <p>Em vez de meia hora esfregando e nem ficando bom, uma passada rápida e a grelha tá limpa. Mais tempo com a galera, menos tempo preso na churrasqueira.</p>
+      </div>
+    </div>
+  </div>
+  <p class="muted center" style="font-size:.85rem;margin-top:36px">🔇 Vídeos sem som · tocam automático</p>
+</section>
+
 <!-- ===== ANTES / DEPOIS ===== -->
 <section class="section section--dark">
   <div class="container center">
     <span class="tagline">RESULTADO REAL</span>
-    <h2 class="h2lead">Da crosta queimada à grelha brilhando</h2>
-    <p class="muted" style="color:#cfc7bd">Uma passada. É isso.</p>
-    <div class="ba">
-      <figure>
-        <figcaption>ANTES</figcaption>
-        <img src="assets/grelha-suja.webp" alt="Grelha suja antes">
-      </figure>
-      <figure>
-        <figcaption class="ok">DEPOIS</figcaption>
-        <img src="assets/grelha-limpa.webp" alt="Grelha limpa depois">
-      </figure>
+    <h2 class="h2lead">Cerdas avançadas pra arrancar gordura, carbono e crosta queimada</h2>
+    <p class="muted" style="color:#cfc7bd">Arrasta pro lado e vê a diferença. Mesma grelha, antes e depois do LimpaBrasa. 👉</p>
+    <div class="ba-slider" id="baSlider" style="--p:50%">
+      <img class="ba-base" src="assets/grelha-limpa.webp" alt="Grelha limpa depois">
+      <div class="ba-top"><img src="assets/grelha-suja.webp" alt="Grelha suja antes"></div>
+      <span class="ba-tag ba-tag--before">ANTES</span>
+      <span class="ba-tag ba-tag--after">DEPOIS</span>
+      <div class="ba-handle"><span class="ba-knob">⟺</span></div>
     </div>
   </div>
 </section>
@@ -157,23 +198,23 @@
 <!-- ===== COMO FUNCIONA ===== -->
 <section class="section" id="como-funciona">
   <div class="container center">
-    <span class="tagline">SIMPLES ASSIM</span>
+    <span class="tagline">SIMPLES ATÉ DEMAIS</span>
     <h2 class="h2lead">Como funciona</h2>
     <div class="steps">
       <div class="step">
         <div class="step__n">1</div>
-        <h3>Liga o motor</h3>
-        <p>Recarregável por USB. Carrega uma vez e usa por vários churrascos sem fio.</p>
+        <h3>É só apertar o botão</h3>
+        <p>Recarregável por USB: carrega uma vez e usa em vários churrascos. Sem fio enroscando, sem pilha pra ficar comprando. Aperta o botão e o motor já começa a girar.</p>
       </div>
       <div class="step">
         <div class="step__n">2</div>
-        <h3>Passa na grelha</h3>
-        <p>As cerdas de aço giram sozinhas e arrancam gordura, carbono e crosta queimada.</p>
+        <h3>Encosta na grelha</h3>
+        <p>As cerdas de aço giram sozinhas e arrancam gordura, carbono e crosta queimada. Você só passa por cima e deixa o motor fazer o trabalho.</p>
       </div>
       <div class="step">
         <div class="step__n">3</div>
         <h3>Grelha nova</h3>
-        <p>Em segundos a grelha tá limpa e pronta. Enxágua a cabeça e guarda.</p>
+        <p>Em segundos o ferro tá limpo e pronto pra próxima picanha. Depois é só enxaguar a cabeça e guardar.</p>
       </div>
     </div>
   </div>
@@ -182,23 +223,23 @@
 <!-- ===== DEPOIMENTOS ===== -->
 <section class="section section--dark">
   <div class="container center">
-    <span class="tagline">QUEM JÁ USA</span>
+    <span class="tagline">QUEM JÁ LARGOU A ESCOVINHA</span>
     <h2 class="h2lead">Aprovado por quem leva churrasco a sério</h2>
     <div class="reviews">
       <div class="review">
         <div class="stars">★★★★★</div>
-        <p>"Comprei desconfiado e me surpreendi. A grelha tava um horror, virou nova. Não esfrego mais nada."</p>
-        <div class="review__by"><img src="assets/avatar.webp" alt=""><div>Rodrigo M.<br><span class="verif">✔ Compra verificada</span></div></div>
+        <p>"Confesso que comprei meio sem fé, achando que era enrolação. Mas rapaz… minha grelha tava encardida de anos e voltou a brilhar com uma passada só. Joguei a escovinha véia no lixo, não uso mais."</p>
+        <div class="review__by"><div class="av av--1">R</div><div>Rodrigo Menezes<br><span class="verif">✔ Compra verificada · Porto Alegre/RS</span></div></div>
       </div>
       <div class="review">
         <div class="stars">★★★★★</div>
-        <p>"Melhor presente que dei pro meu pai. Ele faz churrasco todo fim de semana e agora a limpeza é rapidinha."</p>
-        <div class="review__by"><img src="assets/avatar.webp" alt=""><div>Carla S.<br><span class="verif">✔ Compra verificada</span></div></div>
+        <p>"Dei de Dia dos Pais pro meu pai e ele simplesmente amou. Todo domingo tem churrasco lá em casa e antes era aquela briga pra limpar. Agora ele faz rapidinho e ainda fica se gabando pros vizinhos kkk"</p>
+        <div class="review__by"><div class="av av--2">C</div><div>Carla Sampaio<br><span class="verif">✔ Compra verificada · Goiânia/GO</span></div></div>
       </div>
       <div class="review">
         <div class="stars">★★★★★</div>
-        <p>"Mudou a forma como limpo depois do bbq. O motor faz tudo, é só passar. Recomendo demais."</p>
-        <div class="review__by"><img src="assets/avatar.webp" alt=""><div>Júnior F.<br><span class="verif">✔ Compra verificada</span></div></div>
+        <p>"Melhor compra do ano, sério. O motorzinho faz todo o trabalho, é só encostar na grelha que a gordura sai voando. Chegou rápido e já indiquei pra galera do meu grupo de churrasco."</p>
+        <div class="review__by"><div class="av av--3">J</div><div>Júnior Fontes<br><span class="verif">✔ Compra verificada · Campinas/SP</span></div></div>
       </div>
     </div>
   </div>
@@ -209,12 +250,13 @@
   <div class="container">
     <h2 class="h2lead center">Perguntas frequentes</h2>
     <div class="faq">
-      <details><summary>Como a escova elétrica funciona?</summary><p>Ela tem uma cabeça giratória motorizada que gira as cerdas em alta rotação pra quebrar gordura, comida queimada e carbono com o mínimo de esforço.</p></details>
-      <details><summary>Serve em qualquer churrasqueira?</summary><p>Sim. Funciona na maioria das grelhas, incluindo aço inox e ferro fundido. Evite usar em revestimentos antiaderentes delicados.</p></details>
-      <details><summary>Preciso fazer força?</summary><p>Não. O motor faz o trabalho pesado. Você só guia a escova sobre a grelha enquanto ela limpa.</p></details>
-      <details><summary>É recarregável ou usa pilha?</summary><p>Recarregável por USB, sem fio. Carrega uma vez e usa em vários churrascos com total liberdade.</p></details>
-      <details><summary>Como limpo a própria escova?</summary><p>Depois de usar, enxágue ou passe um pano na cabeça pra tirar os resíduos e deixe secar antes de guardar.</p></details>
-      <details><summary>Quanto tempo leva a entrega?</summary><p>Pedidos são processados em até 2 dias úteis e chegam pela transportadora/Correios. O prazo aparece no checkout conforme seu CEP. Frete grátis pro Brasil.</p></details>
+      <details><summary>É potente de verdade ou é mais uma escovinha cara?</summary><p>De verdade. A cabeça é motorizada e gira as cerdas de aço em alta rotação — é isso que arranca a crosta queimada e o carbono que a escova comum só empurra de um lado pro outro. Você sente a diferença na primeira passada.</p></details>
+      <details><summary>Solta cerda na comida que nem a de arame?</summary><p>Não. As cerdas ficam presas firme no cabeçote giratório, então não saem voando nem grudam na grelha como as escovinhas de arame velhas. Mais segurança pra você e pra galera.</p></details>
+      <details><summary>Serve na minha churrasqueira?</summary><p>Serve. Funciona na maioria das grelhas — aço inox, ferro fundido, grelha de churrasqueira a carvão ou a gás. Só evite revestimentos antiaderentes delicados.</p></details>
+      <details><summary>Preciso fazer força?</summary><p>Nenhuma. O motor faz todo o trabalho pesado. Você só encosta e guia a escova sobre a grelha enquanto ela limpa sozinha.</p></details>
+      <details><summary>É recarregável ou come pilha?</summary><p>Recarregável por USB, sem fio. Carrega uma vez e usa em vários churrascos — sem ficar refém de tomada na área ou comprando pilha toda hora.</p></details>
+      <details><summary>E se a primeira cabeça de cerdas gastar?</summary><p>Você repõe em segundos. A cabeça é de encaixe rápido — por isso muita gente já leva uma reserva junto (aquela opção de +R$ 49 lá em cima) e nunca fica na mão.</p></details>
+      <details><summary>Quanto tempo leva pra chegar?</summary><p>Processamos o pedido em até 2 dias úteis e enviamos pela transportadora/Correios. O prazo certinho aparece no checkout conforme seu CEP. Frete grátis pro Brasil inteiro.</p></details>
     </div>
   </div>
 </section>
@@ -222,15 +264,15 @@
 <!-- ===== CTA FINAL ===== -->
 <section class="section section--dark finalcta">
   <div class="container">
-    <h2>Pronto pra nunca mais sofrer pra limpar a grelha?</h2>
-    <p class="muted" style="color:#cfc7bd">Estoque limitado nessa condição. Frete grátis pro Brasil inteiro.</p>
+    <h2>Pronto pra ter a grelha limpa de verdade?</h2>
+    <p class="muted" style="color:#cfc7bd">Estoque limitado nessa condição. Frete grátis pro Brasil inteiro e 7 dias pra testar — se não amar, devolve sem dor de cabeça.</p>
     <div class="price">
       <span class="price__now" style="color:#fff">R$ 299</span>
       <span class="price__old">R$ 499</span>
       <span class="price__off">-40%</span>
     </div>
     <p class="price__terms" style="color:#cfc7bd">12x de R$ 24,92 sem juros · Pix com desconto</p>
-    <button class="btn btn--cta btn--lg pulse" onclick="addToCart()">🔥 Quero o meu LimpaBrasa</button>
+    <button class="btn btn--cta btn--lg pulse" onclick="addToCart()">🔥 Quero a minha grelha nova</button>
   </div>
 </section>
 
@@ -240,7 +282,7 @@
     <div class="footer__grid">
       <div>
         <div class="logo" style="color:#fff">Limpa<span>Brasa</span></div>
-        <p style="margin-top:10px;max-width:340px">A escova elétrica que deixa a grelha nova de novo, sem esfregar. Frete grátis pro Brasil.</p>
+        <p style="margin-top:10px;max-width:340px">A escova elétrica que descola a crosta queimada que a escovinha comum não tira. Sua grelha limpa de verdade. Frete grátis pro Brasil.</p>
         <div class="footer__pay">
           <span>Pix</span><span>Visa</span><span>Master</span><span>Elo</span><span>Boleto</span>
         </div>
