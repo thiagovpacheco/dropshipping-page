@@ -21,7 +21,7 @@ window.LB = {
     }
   },
   contato: {
-    whatsapp: "5500000000000",   // TROCAR: DDI+DDD+numero, só dígitos
+    whatsapp: "5524992666649",   // DDI 55 + DDD 24 + 99266-6649
     email: "contato@limpabrasa.com.br",
     instagram: "limpabrasa",
     tiktok: "limpabrasa"
