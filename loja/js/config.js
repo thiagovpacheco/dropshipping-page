@@ -30,7 +30,7 @@ window.LB = {
     // Public Key de PRODUÇÃO do Mercado Pago (começa com APP_USR-...).
     // Painel MP > Suas integrações > sua aplicação > Credenciais de produção.
     // Usada no front pra montar o checkout transparente (Bricks).
-    publicKey: "APP_USR-72166bae-c015-4b2c-88b8-3802273a33a1"
+    publicKey: "APP_USR-5351d48b-c30a-47fe-839e-608aa2d51f09"
   },
   checkout: {
     // Página de checkout transparente (Pix + cartão dentro do site).
